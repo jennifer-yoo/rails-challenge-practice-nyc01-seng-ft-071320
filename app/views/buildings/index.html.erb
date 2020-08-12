@@ -1,0 +1,10 @@
+<h1>Building List <h1>
+
+<% @buildings.each do |building| %>
+
+ <h3>Building name: <%= link_to building.name, building_path(building) %></h3>
+        <% building.empty_offices.each do |office|%>
+<p>Avaiable Floors: <%=office.floor %> </p>
+
+<%end%>
+<%end%>

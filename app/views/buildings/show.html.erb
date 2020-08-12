@@ -1,0 +1,11 @@
+<h1> <%= @building.name %> </h1>
+<%= link_to "Click here to edit", edit_building_path %>
+<h3>Companies who rent: </h3>
+    <% @building.companies.each do |company| %>
+    <p>
+        <%= company.name %>
+    </p>
+
+    <%end%>
+
+<h3>Total Rent: $<%= @building.total_rent %></h3>
